@@ -146,6 +146,11 @@ button:hover {
 	transform: translateX(-50%);
 }
 
+.word.non-selected {
+	color: orange;
+	font-weight: bold;
+}
+
 /* ================== ScorePage =================== */
 .score {
 	display: flex;

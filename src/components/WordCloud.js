@@ -37,7 +37,9 @@ const WordCloud = ({ onFinish }) => {
 				? checkedAnswers[i] //check if this word (based on its index) is right (true) or wrong (false)
 					? "correct" //if yes then add class .correct
 					: "incorrect" //if no then add class .incorrect
-				: ""; //if the word is not in checkedAnswers state, then do not add any class
+				: checkedAnswers[i] //if the word is not in checkedAnswers state
+				? "non-selected" //add class .non-selected for correct words but not selected by user
+				: ""; //add nothing to all other words
 			//else if user didn't click show answer button yet
 		} else {
 			//if the word is included in selectedWords state then add class .selected, otherwise add nothing
