@@ -104,6 +104,7 @@ const WordCloud = ({ onFinish }) => {
 							key={i}
 							className={`word ${handleClassNameChange(word, i)}`}
 							onClick={(e) => handleWordClick(e, word)}
+							style={showAnswers ? { pointerEvents: "none" } : null} //after showing answers user cannot click on words
 						>
 							{word}
 						</span>
